@@ -63,7 +63,7 @@ class AboutHashes < Neo::Koan
     assert_equal 2, hash.values.size
     assert_equal true, hash.values.include?("uno")
     assert_equal true, hash.values.include?("dos")
-    assert_equal Symbol, hash.values.class
+    assert_equal Array, hash.values.class
   end
 
   def test_combining_hashes
