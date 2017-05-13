@@ -36,12 +36,12 @@ class AboutMethods < Neo::Koan
     exception = assert_raise(ArgumentError) do
       my_global_method
     end
-    assert_match(/wrong number of arguments \(given 0, expected 2\)/, exception.message)
+    assert_match(/wrong number of arguments \(0 for 2\)/, exception.message)
 
     exception = assert_raise(ArgumentError) do
       my_global_method(1,2,3)
     end
-    assert_match(/wrong number of arguments \(given 3, expected 2\)/, exception.message)
+    assert_match(/wrong number of arguments \(3 for 2\)/, exception.message)
   end
 
   # ------------------------------------------------------------------
@@ -62,10 +62,10 @@ class AboutMethods < Neo::Koan
   end
 
   def test_calling_with_variable_arguments
-    assert_equal __, method_with_var_args.class
-    assert_equal __, method_with_var_args
-    assert_equal __, method_with_var_args(:one)
-    assert_equal __, method_with_var_args(:one, :two)
+    assert_equal Array, method_with_var_args.class
+    assert_equal  [], method_with_var_args
+    assert_equal [:one], method_with_var_args(:one)
+    assert_equal [:one, :two], method_with_var_args(:one, :two)
   end
 
   # ------------------------------------------------------------------
