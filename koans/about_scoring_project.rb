@@ -36,6 +36,9 @@ def score(dice)
     if d == 5
       sum += 50
     end
+    if d == 1
+      sum += 100
+    end
   end
   sum
 end
