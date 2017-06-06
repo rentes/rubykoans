@@ -32,12 +32,23 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 def score(dice)
   0 if (dice == [])
   sum = 0
+  triple_one = 0
+  triple_two = 0
+  triple_three = 0
+  triple_four = 0
+  triple_five = 0
+  triple_six = 0
   dice.each do |d|
     if d == 5
       sum += 50
+      triple_five+=1
     end
     if d == 1
       sum += 100
+      triple_one+=1
+    end
+    if triple_one == 3
+      sum+=1000
     end
   end
   sum
