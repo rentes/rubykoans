@@ -41,7 +41,7 @@ def score(dice)
   dice.each do |d|
     if d == 5
       sum += 50
-      triple_five+=1
+      triple_five += 1
     end
     if d == 1
       sum += 100
