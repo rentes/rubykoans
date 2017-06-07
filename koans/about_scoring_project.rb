@@ -45,10 +45,10 @@ def score(dice)
     end
     if d == 1
       sum += 100
-      triple_one+=1
+      triple_one += 1
     end
     if triple_one == 3
-      sum+=1000
+      sum += 1000
     end
   end
   sum
