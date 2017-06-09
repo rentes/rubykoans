@@ -42,7 +42,6 @@ def score(dice)
   else
     dice.each do |d|
       if d == 5
-        sum += 50
         triple_five += 1
       end
       if d == 1
@@ -56,6 +55,9 @@ def score(dice)
     elsif triple_one == 5
       sum += 1200
     else sum += 100
+    end
+    if triple_five == 1
+      sum += 50
     end
   end
   sum
