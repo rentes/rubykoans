@@ -41,12 +41,8 @@ def score(dice)
     sum = 0
   else
     dice.each do |d|
-      if d == 5
-        triple_five += 1
-      end
-      if d == 1
-        triple_one += 1
-      end
+      triple_five += 1 if d == 5
+      triple_one += 1 if d == 1
     end
     if triple_one == 3
       sum += 1000
@@ -56,9 +52,7 @@ def score(dice)
       sum += 1200
     else sum += 100
     end
-    if triple_five == 1
-      sum += 50
-    end
+    sum += 50 if triple_five == 1
   end
   sum
 end
