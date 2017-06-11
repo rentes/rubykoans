@@ -52,7 +52,7 @@ def score(dice)
       sum += 1200
     else sum += 100
     end
-    sum += 50 if triple_five == 1
+    sum += (50 * triple_five)
   end
   sum
 end
