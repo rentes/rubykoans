@@ -44,7 +44,9 @@ def score(dice)
       triple_five += 1 if d == 5
       triple_one += 1 if d == 1
     end
-    if triple_one == 3
+    if triple_one == 1 || triple_one == 2
+      sum += (triple_one * 100)
+    elsif triple_one == 3
       sum += 1000
     elsif triple_one == 4
       sum += 1100
