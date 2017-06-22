@@ -52,9 +52,9 @@ def score(dice)
       sum += 1100
     elsif triple_one == 5
       sum += 1200
-    elsif triple_five > 0
+    end
+    if triple_five > 0
       sum += (50 * triple_five)
-    else sum += 100
     end
   end
   sum
