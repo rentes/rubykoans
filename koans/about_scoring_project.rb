@@ -43,6 +43,7 @@ def score(dice)
     dice.each do |d|
       triple_five += 1 if d == 5
       triple_one += 1 if d == 1
+      triple_two += 1 if d == 2
     end
     if triple_one == 1 || triple_one == 2
       sum += (triple_one * 100)
@@ -55,6 +56,9 @@ def score(dice)
     end
     if triple_five > 0
       sum += (50 * triple_five)
+    end
+    if triple_two == 3
+      sum += 200 * 2
     end
   end
   sum
