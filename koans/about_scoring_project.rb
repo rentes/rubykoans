@@ -44,6 +44,10 @@ def score(dice)
       triple_five += 1 if d == 5
       triple_one += 1 if d == 1
       triple_two += 1 if d == 2
+      triple_three += 1 if d == 3
+      triple_four += 1 if d == 4
+      triple_five += 1 if d == 5
+      triple_six += 1 if d == 6
     end
     if triple_one == 1 || triple_one == 2
       sum += (triple_one * 100)
@@ -58,7 +62,19 @@ def score(dice)
       sum += (50 * triple_five)
     end
     if triple_two == 3
-      sum += 200 * 2
+      sum += 100 * 2
+    end
+    if triple_three == 3
+      sum += 100 * 3
+    end
+    if triple_four == 3
+      sum += 100 * 4
+    end
+    if triple_five == 3
+      sum += 100 * 5
+    end
+    if triple_six == 3
+      sum += 100 * 6
     end
   end
   sum
